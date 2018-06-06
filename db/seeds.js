@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const user = require('../models/user')
 const gameplan = require('../models/gameplan')
+const belt = require('../models/belt')
+const technique = require('../models/technique')
 
 // Connect to Database
 const mongoose = require('mongoose')
@@ -15,8 +17,102 @@ mongoose.connect(process.env.MONGODB_URI)
 })
 // Remove old Data
 user.remove()
-  
+belt.remove()
+gameplan.remove()
+technique.remove()
+.then(()=>{
 
+
+  const bluebelt = new gameplan({
+    openguardOffense:[],
+    openguardDefense:[],
+    closeguardOffense:[],
+    closeguardDefense:[],
+    halfguardOffense:[],
+    halfguardDeffense:[],
+    sidebodyOffense:[],
+    sidebodyDefense:[],
+    northsouthOffense:[],
+    northsouthDefense:[],
+    kneeonbellyOffense:[],
+    kneeonbellyDefense:[],
+    fullmountOffense:[],
+    fullmountDefense:[],
+    backcontrolOffense:[],
+    backcontrolDefense:[],
+    takedownOffense:[],
+    takedownDefense:[],
+    turtleposition:[],
+  })
+
+  const purplebelt = new gameplan({
+    openguardOffense:[],
+    openguardDefense:[],
+    closeguardOffense:[],
+    closeguardDefense:[],
+    halfguardOffense:[],
+    halfguardDeffense:[],
+    sidebodyOffense:[],
+    sidebodyDefense:[],
+    northsouthOffense:[],
+    northsouthDefense:[],
+    kneeonbellyOffense:[],
+    kneeonbellyDefense:[],
+    fullmountOffense:[],
+    fullmountDefense:[],
+    backcontrolOffense:[],
+    backcontrolDefense:[],
+    takedownOffense:[],
+    takedownDefense:[],
+    turtleposition:[],
+  })
+
+  const brownbelt = new gameplan({
+    openguardOffense:[],
+    openguardDefense:[],
+    closeguardOffense:[],
+    closeguardDefense:[],
+    halfguardOffense:[],
+    halfguardDeffense:[],
+    sidebodyOffense:[],
+    sidebodyDefense:[],
+    northsouthOffense:[],
+    northsouthDefense:[],
+    kneeonbellyOffense:[],
+    kneeonbellyDefense:[],
+    fullmountOffense:[],
+    fullmountDefense:[],
+    backcontrolOffense:[],
+    backcontrolDefense:[],
+    takedownOffense:[],
+    takedownDefense:[],
+    turtleposition:[],
+  })
+
+  const blackbelt = new gameplan({
+    openguardOffense:[],
+    openguardDefense:[],
+    closeguardOffense:[],
+    closeguardDefense:[],
+    halfguardOffense:[],
+    halfguardDeffense:[],
+    sidebodyOffense:[],
+    sidebodyDefense:[],
+    northsouthOffense:[],
+    northsouthDefense:[],
+    kneeonbellyOffense:[],
+    kneeonbellyDefense:[],
+    fullmountOffense:[],
+    fullmountDefense:[],
+    backcontrolOffense:[],
+    backcontrolDefense:[],
+    takedownOffense:[],
+    takedownDefense:[],
+    turtleposition:[],
+  })
+//==========================
+// Belt info 
+//==========================
 const blue = new belt({
     color : "Blue",
     requirements: {}
@@ -36,7 +132,9 @@ const black = new belt({
 
 const belts = [ blue, purple, brown, black ]
 
-    // create new test user data
+//===========================
+// Test User Data
+//===========================
     const user1 = new user({
         name : "Deon",
         school: "Independant MMA",
