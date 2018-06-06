@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const beltSchema = require('../db/schemas/users')
+const beltSchema = require('../db/schemas/belt')
 
 const belt = mongoose.model('belt', beltSchema)
 
