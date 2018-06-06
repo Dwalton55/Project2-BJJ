@@ -18,7 +18,7 @@ user.remove()
   
 
 const blue = new belt({
-    color : "Plue",
+    color : "Blue",
     requirements: {}
 })
 const purple = new belt({
@@ -34,7 +34,7 @@ const black = new belt({
     requirements: {}
 })
 
-const belts = [ user1, user2, user3, user4 ]
+const belts = [ blue, purple, brown, black ]
 
     // create new test user data
     const user1 = new user({
