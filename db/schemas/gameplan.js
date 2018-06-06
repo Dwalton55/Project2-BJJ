@@ -3,7 +3,7 @@ const gameplanSchema = require('mongoose').Schema
 
 
 
-const beltSchema = new Schema({
+const gameplanSchema = new Schema({
     openguardOffense:[],
     openguardDefense:[],
     closeguardOffense:[],
