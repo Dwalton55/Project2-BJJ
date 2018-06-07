@@ -36,12 +36,11 @@ app.use('/users', usersRouter);
 //Connect to data base
 //============================
 const mongoose = require('mongoose')
-//mongoose.connect(process.env.MONGODB_URI)
-mongoose.connect('mongodb://localhost/bjjtrainer')
+mongoose.connect(process.env.MONGODB_URI)
+//mongoose.connect('mongodb://localhost/bjjtrainer')
 .then(() => {
   console.log("====================")
   console.log('connected to mongoDB')
-  console.log("====================")
   console.log("====================")
 })
 .catch((err) => {
