@@ -6,7 +6,7 @@ const Schema = require('mongoose').Schema
 const userSchema = new Schema({
     name : String,
     school: String,
-    coach: string,
+    coach: String,
     currentBelt: Object,
     targetBelt: Object,
     gamePlans: [],

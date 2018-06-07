@@ -42,6 +42,7 @@ mongoose.connect('mongodb://localhost/bjjtrainer')
   console.log("====================")
   console.log('connected to mongoDB')
   console.log("====================")
+  console.log("====================")
 })
 .catch((err) => {
   console.log('ERROR', err)

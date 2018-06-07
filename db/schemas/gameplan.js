@@ -1,5 +1,5 @@
 //requirements: require mongoose
-const gameplanSchema = require('mongoose').Schema
+const Schema = require('mongoose').Schema
 
 
 
