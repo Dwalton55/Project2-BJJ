@@ -55,5 +55,12 @@ router.put('/:id', (req, res) => {
 })
 
 //delete
+router.delete('/:id', (req, res) => {
+  User.findByIdAndRemove(req.params.id)
+    .then(() => {
+      console.log('Successfully Delete ')
+      res.redirect('/user')
+    })
+})
 
 module.exports = router
