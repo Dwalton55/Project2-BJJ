@@ -19,7 +19,18 @@ router.get('/', (req, res, next) => {
   })
 
 // new
+router.get('/new', (req, res) => {
+  res.render('user/userNew')
+})
 //create
+router.post('/', (req, res) => {
+  const newUser = req.body
+  User
+    .create(newUser)
+    .then(() => {
+      res.redirect('/users')
+    })
+})
 //show
 //edit
 //update

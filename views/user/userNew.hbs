@@ -1,0 +1,26 @@
+<h1>Create New User</h1>
+
+<form action="/users" method="POST">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Student Name" />
+    </div>
+    <div>
+        <div>
+            <label for="school">School Name</label>
+            <input type="text" name="school" placeholder="School" />
+        </div>
+        <label for="coach">Coach</label>
+        <input type="text" name="coach" placeholder="Main coach">
+    </div>
+    {{!-- <div>
+        <label for="currentBelt">Belt level</label>
+        <input type="text" name="currentBelt" placeholder="Current belt" />
+    </div>
+    <div>
+        <label for="targetBelt">Next belt</label>
+        <input type="text" name="targetBelt" placeholder="next belt" />
+    </div> --}}
+ 
+    <button type="submit">Save user</button>
+</form>
