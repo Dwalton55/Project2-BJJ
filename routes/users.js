@@ -32,6 +32,13 @@ router.post('/', (req, res) => {
     })
 })
 //show
+router.get('/:id', (req, res) => {
+  User
+    .findById(req.params.id)
+    .then((indivUser) => {
+      res.render('user/userInfo', { indivUser })
+    })
+})
 //edit
 //update
 //delete
