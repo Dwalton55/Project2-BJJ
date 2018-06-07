@@ -1,3 +1,4 @@
+//require('dotenv').config();
 const mongoose = require('mongoose')
 const user = require('../models/user')
 const gameplan = require('../models/gameplan')
@@ -6,22 +7,27 @@ const technique = require('../models/technique')
 
 // Connect to Database
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI)
+//mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect('mongodb://localhost/bjjtrainer')
 .then(() => {
   console.log("====================")
   console.log('connected to mongoDB')
   console.log("====================")
+  
 })
-.catch((err) => {
-  console.log('ERROR', err)
+.then(() => {
+  console.log('test')
 })
+
 // Remove old Data
+console.log('test')
 user.remove()
 belt.remove()
 gameplan.remove()
 technique.remove()
 .then(()=>{
 
+    console.log("checkpoint 1 data removed")
 
 //=========================
 // techniques
@@ -43,6 +49,7 @@ const openguard3_O = new technique({
     Name : "pass 3",
     Description: "3rd pass guard",
 })
+
 
 //=========================
 // techniques open deffense
@@ -357,6 +364,11 @@ const turtleposition3 = new technique({
     Name : "turtle position 3",
     Description: "1 double attack defense from guard",
 })
+console.log("checkpoint 2 techniques written")
+const techniques = [openguard1_O,openguard2_O,openguard3_O,openguard1_D,openguard2_D,openguard3_D,closeguard1_O,closeguard2_O,closeguard3_O,closeguard1_D,closeguard2_D,closeguard3_D,halfguard1_O,halfguard2_O,halfguard3_O,halfguard1_D,halfguard2_D,halfguard3_D,sidebody1_O,sidebody2_O,sidebody3_O,sidebody1_D,sidebody2_D,sidebody3_D,northsouth1_O,northsouth2_O,northsouth3_O,northsouth1_D,northsouth2_D,northsouth3_D,kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O,kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O,fullmount1_O,fullmount2_O,fullmount3_O,fullmount1_D,fullmount2_D,fullmount3_D,backcontroll1_O,backcontroll2_O,backcontroll3_O,backcontroll1_D,backcontroll2_D,backcontroll3_D,takedown1_O,takedown2_O,takedown3_O,takedown1_D,takedown2_D,takedown3_D,turtleposition1,turtleposition2,turtleposition3]
+
+return technique.insertMany(techniques)
+console.log("checkpoint 3 techniques added")
 //======================
 //belt game plans
 //======================
@@ -383,92 +395,99 @@ const turtleposition3 = new technique({
   })
 
   const purplebelt = new gameplan({
-    openguardOffense:[],
-    openguardDefense:[],
-    closeguardOffense:[],
-    closeguardDefense:[],
-    halfguardOffense:[],
-    halfguardDeffense:[],
-    sidebodyOffense:[],
-    sidebodyDefense:[],
-    northsouthOffense:[],
-    northsouthDefense:[],
-    kneeonbellyOffense:[],
-    kneeonbellyDefense:[],
-    fullmountOffense:[],
-    fullmountDefense:[],
-    backcontrolOffense:[],
-    backcontrolDefense:[],
-    takedownOffense:[],
-    takedownDefense:[],
-    turtleposition:[],
+    openguardOffense:[openguard1_O,openguard2_O,openguard3_O],
+    openguardDefense:[openguard1_D,openguard2_D,openguard3_D],
+    closeguardOffense:[closeguard1_O,closeguard2_O,closeguard3_O],
+    closeguardDefense:[closeguard1_D,closeguard2_D,closeguard3_D],
+    halfguardOffense:[halfguard1_O,halfguard2_O,halfguard3_O],
+    halfguardDeffense:[halfguard1_D,halfguard2_D,halfguard3_D],
+    sidebodyOffense:[sidebody1_O,sidebody2_O,sidebody3_O],
+    sidebodyDefense:[sidebody1_D,sidebody2_D,sidebody3_D],
+    northsouthOffense:[northsouth1_O,northsouth2_O,northsouth3_O],
+    northsouthDefense:[northsouth1_D,northsouth2_D,northsouth3_D],
+    kneeonbellyOffense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    kneeonbellyDefense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    fullmountOffense:[fullmount1_O,fullmount2_O,fullmount3_O],
+    fullmountDefense:[fullmount1_D,fullmount2_D,fullmount3_D],
+    backcontrolOffense:[backcontroll1_O,backcontroll2_O,backcontroll3_O],
+    backcontrolDefense:[backcontroll1_D,backcontroll2_D,backcontroll3_D],
+    takedownOffense:[takedown1_O,takedown2_O,takedown3_O],
+    takedownDefense:[takedown1_D,takedown2_D,takedown3_D],
+    turtleposition:[turtleposition1,turtleposition2,turtleposition3],
   })
 
+
   const brownbelt = new gameplan({
-    openguardOffense:[],
-    openguardDefense:[],
-    closeguardOffense:[],
-    closeguardDefense:[],
-    halfguardOffense:[],
-    halfguardDeffense:[],
-    sidebodyOffense:[],
-    sidebodyDefense:[],
-    northsouthOffense:[],
-    northsouthDefense:[],
-    kneeonbellyOffense:[],
-    kneeonbellyDefense:[],
-    fullmountOffense:[],
-    fullmountDefense:[],
-    backcontrolOffense:[],
-    backcontrolDefense:[],
-    takedownOffense:[],
-    takedownDefense:[],
-    turtleposition:[],
+    openguardOffense:[openguard1_O,openguard2_O,openguard3_O],
+    openguardDefense:[openguard1_D,openguard2_D,openguard3_D],
+    closeguardOffense:[closeguard1_O,closeguard2_O,closeguard3_O],
+    closeguardDefense:[closeguard1_D,closeguard2_D,closeguard3_D],
+    halfguardOffense:[halfguard1_O,halfguard2_O,halfguard3_O],
+    halfguardDeffense:[halfguard1_D,halfguard2_D,halfguard3_D],
+    sidebodyOffense:[sidebody1_O,sidebody2_O,sidebody3_O],
+    sidebodyDefense:[sidebody1_D,sidebody2_D,sidebody3_D],
+    northsouthOffense:[northsouth1_O,northsouth2_O,northsouth3_O],
+    northsouthDefense:[northsouth1_D,northsouth2_D,northsouth3_D],
+    kneeonbellyOffense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    kneeonbellyDefense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    fullmountOffense:[fullmount1_O,fullmount2_O,fullmount3_O],
+    fullmountDefense:[fullmount1_D,fullmount2_D,fullmount3_D],
+    backcontrolOffense:[backcontroll1_O,backcontroll2_O,backcontroll3_O],
+    backcontrolDefense:[backcontroll1_D,backcontroll2_D,backcontroll3_D],
+    takedownOffense:[takedown1_O,takedown2_O,takedown3_O],
+    takedownDefense:[takedown1_D,takedown2_D,takedown3_D],
+    turtleposition:[turtleposition1,turtleposition2,turtleposition3],
   })
 
   const blackbelt = new gameplan({
-    openguardOffense:[],
-    openguardDefense:[],
-    closeguardOffense:[],
-    closeguardDefense:[],
-    halfguardOffense:[],
-    halfguardDeffense:[],
-    sidebodyOffense:[],
-    sidebodyDefense:[],
-    northsouthOffense:[],
-    northsouthDefense:[],
-    kneeonbellyOffense:[],
-    kneeonbellyDefense:[],
-    fullmountOffense:[],
-    fullmountDefense:[],
-    backcontrolOffense:[],
-    backcontrolDefense:[],
-    takedownOffense:[],
-    takedownDefense:[],
-    turtleposition:[],
+    openguardOffense:[openguard1_O,openguard2_O,openguard3_O],
+    openguardDefense:[openguard1_D,openguard2_D,openguard3_D],
+    closeguardOffense:[closeguard1_O,closeguard2_O,closeguard3_O],
+    closeguardDefense:[closeguard1_D,closeguard2_D,closeguard3_D],
+    halfguardOffense:[halfguard1_O,halfguard2_O,halfguard3_O],
+    halfguardDeffense:[halfguard1_D,halfguard2_D,halfguard3_D],
+    sidebodyOffense:[sidebody1_O,sidebody2_O,sidebody3_O],
+    sidebodyDefense:[sidebody1_D,sidebody2_D,sidebody3_D],
+    northsouthOffense:[northsouth1_O,northsouth2_O,northsouth3_O],
+    northsouthDefense:[northsouth1_D,northsouth2_D,northsouth3_D],
+    kneeonbellyOffense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    kneeonbellyDefense:[kneeonbelly1_O,kneeonbelly2_O,kneeonbelly3_O],
+    fullmountOffense:[fullmount1_O,fullmount2_O,fullmount3_O],
+    fullmountDefense:[fullmount1_D,fullmount2_D,fullmount3_D],
+    backcontrolOffense:[backcontroll1_O,backcontroll2_O,backcontroll3_O],
+    backcontrolDefense:[backcontroll1_D,backcontroll2_D,backcontroll3_D],
+    takedownOffense:[takedown1_O,takedown2_O,takedown3_O],
+    takedownDefense:[takedown1_D,takedown2_D,takedown3_D],
+    turtleposition:[turtleposition1,turtleposition2,turtleposition3],
   })
+  const gameplans = [bluebelt,purplebelt, brownbelt, blackbelt]
+  
+  return gameplan.insertMany(gameplans)
+  console.log("checkpoint 4 gameplans created and added")
 //==========================
 // Belt info 
 //==========================
 const blue = new belt({
     color : "Blue",
-    requirements: {}
+    requirements: bluebelt
 })
 const purple = new belt({
     color : "Purple",
-    requirements: {}
+    requirements: purplebelt
 })
 const brown= new belt({
     color : "Brown",
-    requirements: {}
+    requirements: brownbelt
 })
 const black = new belt({
     color : "Black",
-    requirements: {}
+    requirements: blackbelt
 })
 
 const belts = [ blue, purple, brown, black ]
 
+return belt.insertMany(belts)
+console.log("checkpoint 5 belts added and created")
 //===========================
 // Test User Data
 //===========================
@@ -478,7 +497,7 @@ const belts = [ blue, purple, brown, black ]
         coach: "Chris Ruiz",
         currentBelt: blue,
         targetBelt: purple,
-        gamePlans: [BlueBelt],
+        gamePlans: [bluebelt],
         trainingplans:[],
         tournaments:[],
         pastbelts:["White"]
@@ -489,7 +508,7 @@ const belts = [ blue, purple, brown, black ]
         coach: "Jon Ryan",
         currentBelt: blue,
         targetBelt: purple,
-        gamePlans: [BlueBelt],
+        gamePlans: [bluebelt],
         trainingplans:[],
         tournaments:[],
         pastbelts:["White"]
@@ -500,7 +519,7 @@ const belts = [ blue, purple, brown, black ]
         coach: "Chris Ruiz",
         currentBelt: brown,
         targetBelt: black,
-        gamePlans: [BlackBelt],
+        gamePlans: [brownbelt],
         trainingplans:[],
         tournaments:[],
         pastbelts:["White","blue","purple"]
@@ -510,7 +529,7 @@ const belts = [ blue, purple, brown, black ]
         school: "Independant MMA",
         coach: "Byron Stone",
         currentBelt: black,
-        gamePlans:[BlueBelt],
+        gamePlans:[blackbelt],
         trainingplans:[],
         tournaments:[],
         pastbelts:["White","blue","purple","brown"]
@@ -520,9 +539,14 @@ const belts = [ blue, purple, brown, black ]
 
     // save test data
     return user.insertMany(users)
+    console.log("checkpoint 6 users added and created")
   })
   .then(() => {
-
+    console.log("============")
+    console.log("closing db")
+    console.log("============")
     // close the database
     mongoose.connection.close()
+  }).catch((err) => {
+    console.log('ERROR', err)
   })

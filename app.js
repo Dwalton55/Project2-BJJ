@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -9,7 +11,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 
-require('dotenv').config();
+
 
 
 var app = express();
@@ -34,7 +36,8 @@ app.use('/users', usersRouter);
 //Connect to data base
 //============================
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI)
+//mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect('mongodb://localhost/bjjtrainer')
 .then(() => {
   console.log("====================")
   console.log('connected to mongoDB')
