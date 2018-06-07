@@ -1,9 +1,28 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
+const User = require('../models/users')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
 
-module.exports = router;
+router.get('/', (req, res, next) => {
+
+    // Find all Users
+    User
+      .find()
+      .then((listofUsers) => {
+  
+        // Once you have all homework, then render out index page homeworks is all
+        // pieces of data that match the Homework Model
+        res.render('user/userIndex', { listofUsers })
+      })
+      .catch((err) => res.send(err))
+  
+  })
+
+// new
+//create
+//show
+//edit
+//update
+//delete
+
+module.exports = router

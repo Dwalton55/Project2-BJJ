@@ -1,0 +1,12 @@
+<h1>All Users</h1>
+
+<ul>
+  {{#each listofUsers}}
+  <li>
+    <a href="/user/{{_id}}">
+      <p>{{name}} - {{school}}</p>
+      <p>Coach:{{coach}}</p>
+    </a>
+  </li>
+  {{/each}}
+</ul>
