@@ -40,7 +40,20 @@ router.get('/:id', (req, res) => {
     })
 })
 //edit
+router.get('/:id/edit', (req, res) => {
+  User
+    .findById(req.params.id)
+    .then((indivUser) => {
+      res.render('user/userEdit', { indivUser})
+    })
+})
 //update
+router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+    res.redirect(`/user/${req.params.id}`)
+  })
+})
+
 //delete
 
 module.exports = router
