@@ -41,8 +41,25 @@ router.post('/', (req, res) => {
       })
       .then(() => {
   
-        // redirect to comments
+        // redirect to gameplans
         res.redirect(`/user/${req.params.id}/gameplans`)
       })
   })
+
+  //show
+router.get('/:gameid', (req, res) => {
+    const userid = req.params.id
+    const gameplan = req.params.gameid
+    User.findById(userid)
+    .then((userGP) => {
+        console.log(userGP.gamePlans)
+      const gameplans = userGP.gamePlans.id(gameplan)
+      res.render('user/gameplan/gameplanShow', {
+        userid,
+        gameplans,
+
+      })
+    })
+  })
+
 module.exports = router

@@ -3,9 +3,9 @@ const Schema = require('mongoose').Schema
 
 
 
-const tecniqueSchema = new Schema({
+const techniqueSchema = new Schema({
     Name : String,
     Description: String,
 })
 
-module.exports = tecniqueSchema
+module.exports = techniqueSchema

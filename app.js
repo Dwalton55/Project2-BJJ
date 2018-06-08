@@ -10,7 +10,7 @@ const bodyparser = require('body-parser')
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 const gameplanRouter = require('./routes/gameplan')
-
+const techniqueRouter =require('./routes/technique')
 
 
 
@@ -33,6 +33,7 @@ app.use(methodOverride("_method"));
 app.use('/', indexRouter)
 app.use('/user', usersRouter)
 app.use('/user/:id/gameplans', gameplanRouter)
+app.use('/user/:id/gameplans/:gameid/:posid', techniqueRouter)
 
 //============================
 //Connect to data base

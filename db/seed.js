@@ -729,7 +729,7 @@ const user1 = new user({
     gamePlans: [bluebelt],
     trainingplans: [],
     tournaments: [],
-    pastbelts: ["White"]
+    pastbelts: []
 })
 const user2 = new user({
     name: "Destin",
@@ -740,7 +740,7 @@ const user2 = new user({
     gamePlans: [bluebelt],
     trainingplans: [],
     tournaments: [],
-    pastbelts: ["White"]
+    pastbelts: []
 })
 const user3 = new user({
     name: "Jon Ryan",
@@ -751,7 +751,7 @@ const user3 = new user({
     gamePlans: [brownbelt],
     trainingplans: [],
     tournaments: [],
-    pastbelts: ["White", "blue", "purple"]
+    pastbelts: [ blue, purple]
 })
 const user4 = new user({
     name: "Chris",
@@ -761,7 +761,7 @@ const user4 = new user({
     gamePlans: [blackbelt],
     trainingplans: [],
     tournaments: [],
-    pastbelts: ["White", "blue", "purple", "brown"]
+    pastbelts: [blue, purple, brown]
 })
 
 const users = [user1, user2, user3, user4]
