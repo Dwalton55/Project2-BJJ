@@ -367,92 +367,328 @@ console.log("checkpoint 3 techniques added")
 //belt game plans
 //======================
 const bluebelt = new gameplan({
-    openguardOffense: [openguard1_O, openguard2_O, openguard3_O],
-    openguardDefense: [openguard1_D, openguard2_D, openguard3_D],
-    closeguardOffense: [closeguard1_O, closeguard2_O, closeguard3_O],
-    closeguardDefense: [closeguard1_D, closeguard2_D, closeguard3_D],
-    halfguardOffense: [halfguard1_O, halfguard2_O, halfguard3_O],
-    halfguardDeffense: [halfguard1_D, halfguard2_D, halfguard3_D],
-    sidebodyOffense: [sidebody1_O, sidebody2_O, sidebody3_O],
-    sidebodyDefense: [sidebody1_D, sidebody2_D, sidebody3_D],
-    northsouthOffense: [northsouth1_O, northsouth2_O, northsouth3_O],
-    northsouthDefense: [northsouth1_D, northsouth2_D, northsouth3_D],
-    kneeonbellyOffense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    kneeonbellyDefense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    fullmountOffense: [fullmount1_O, fullmount2_O, fullmount3_O],
-    fullmountDefense: [fullmount1_D, fullmount2_D, fullmount3_D],
-    backcontrolOffense: [backcontroll1_O, backcontroll2_O, backcontroll3_O],
-    backcontrolDefense: [backcontroll1_D, backcontroll2_D, backcontroll3_D],
-    takedownOffense: [takedown1_O, takedown2_O, takedown3_O],
-    takedownDefense: [takedown1_D, takedown2_D, takedown3_D],
-    turtleposition: [turtleposition1, turtleposition2, turtleposition3],
+    planname:"blue belt requirments",
+    targetbelt:"Blue Belt",
+    openguardOffense: {
+        position: "openguardOffense"  ,
+       techniques: [openguard1_O, openguard2_O, openguard3_O]
+    },
+    openguardDefense: {
+        position:  "openguardDefense",
+       techniques: [openguard1_D, openguard2_D, openguard3_D]
+    },
+    closeguardOffense: {
+        position: "closeguardOffense" ,
+       techniques: [closeguard1_O, closeguard2_O, closeguard3_O]
+    },
+    closeguardDefense: {
+        position:  "closeguardDefense",
+       techniques: [closeguard1_D, closeguard2_D, closeguard3_D]
+    },
+    halfguardOffense: {
+        position: "halfguardOffense" ,
+       techniques: [halfguard1_O, halfguard2_O, halfguard3_O]
+    },
+    halfguardDeffense: {
+        position: "halfguardDeffense" ,
+       techniques: [halfguard1_D, halfguard2_D, halfguard3_D]
+    },
+    sidebodyOffense: {
+        position: "sidebodyOffense" ,
+       techniques: [sidebody1_O, sidebody2_O, sidebody3_O]
+    },
+    sidebodyDefense: {
+        position: "sidebodyDefense" ,
+       techniques: [sidebody1_D, sidebody2_D, sidebody3_D]
+    },
+    northsouthOffense: {
+        position: "northsouthOffense" ,
+       techniques: [northsouth1_O, northsouth2_O, northsouth3_O]
+    },
+    northsouthDefense: {
+        position: "northsouthDefense" ,
+       techniques: [northsouth1_D, northsouth2_D, northsouth3_D]
+    },
+    kneeonbellyOffense: {
+        position: "kneeonbellyOffense" ,
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    kneeonbellyDefense: {
+        position:  "kneeonbellyDefense",
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    fullmountOffense: {
+        position: "fullmountOffense" ,
+       techniques: [fullmount1_O, fullmount2_O, fullmount3_O]
+    },
+    fullmountDefense: {
+        position: "fullmountDefense" ,
+       techniques: [fullmount1_D, fullmount2_D, fullmount3_D]
+    },
+    backcontrolOffense: {
+        position: "backcontrolOffense" ,
+       techniques: [backcontroll1_O, backcontroll2_O, backcontroll3_O]
+    },
+    backcontrolDefense: {
+        position:  "backcontrolDefense",
+       techniques: [backcontroll1_D, backcontroll2_D, backcontroll3_D]
+    },
+    takedownOffense: {
+        position: "takedownOffense" ,
+       techniques: [takedown1_O, takedown2_O, takedown3_O]
+    },
+    takedownDefense: {
+        position: "takedownDefense" ,
+       techniques: [takedown1_D, takedown2_D, takedown3_D]
+    },
+    turtleposition: {
+        position: "turtleposition" ,
+       techniques: [turtleposition1, turtleposition2, turtleposition3]
+    },
 })
 
 const purplebelt = new gameplan({
-    openguardOffense: [openguard1_O, openguard2_O, openguard3_O],
-    openguardDefense: [openguard1_D, openguard2_D, openguard3_D],
-    closeguardOffense: [closeguard1_O, closeguard2_O, closeguard3_O],
-    closeguardDefense: [closeguard1_D, closeguard2_D, closeguard3_D],
-    halfguardOffense: [halfguard1_O, halfguard2_O, halfguard3_O],
-    halfguardDeffense: [halfguard1_D, halfguard2_D, halfguard3_D],
-    sidebodyOffense: [sidebody1_O, sidebody2_O, sidebody3_O],
-    sidebodyDefense: [sidebody1_D, sidebody2_D, sidebody3_D],
-    northsouthOffense: [northsouth1_O, northsouth2_O, northsouth3_O],
-    northsouthDefense: [northsouth1_D, northsouth2_D, northsouth3_D],
-    kneeonbellyOffense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    kneeonbellyDefense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    fullmountOffense: [fullmount1_O, fullmount2_O, fullmount3_O],
-    fullmountDefense: [fullmount1_D, fullmount2_D, fullmount3_D],
-    backcontrolOffense: [backcontroll1_O, backcontroll2_O, backcontroll3_O],
-    backcontrolDefense: [backcontroll1_D, backcontroll2_D, backcontroll3_D],
-    takedownOffense: [takedown1_O, takedown2_O, takedown3_O],
-    takedownDefense: [takedown1_D, takedown2_D, takedown3_D],
-    turtleposition: [turtleposition1, turtleposition2, turtleposition3],
+    planname:"purple belt requirments",
+    targetbelt:"purple Belt",
+    openguardOffense: {
+        position: "openguardOffense"  ,
+       techniques: [openguard1_O, openguard2_O, openguard3_O]
+    },
+    openguardDefense: {
+        position: "closeguardOffense" ,
+       techniques: [openguard1_D, openguard2_D, openguard3_D]
+    },
+    closeguardOffense: {
+        position: "openguardDefense" ,
+       techniques: [closeguard1_O, closeguard2_O, closeguard3_O]
+    },
+    closeguardDefense: {
+        position:  "closeguardDefense",
+       techniques: [closeguard1_D, closeguard2_D, closeguard3_D]
+    },
+    halfguardOffense: {
+        position: "halfguardOffense" ,
+       techniques: [halfguard1_O, halfguard2_O, halfguard3_O]
+    },
+    halfguardDeffense: {
+        position: "halfguardDeffense" ,
+       techniques: [halfguard1_D, halfguard2_D, halfguard3_D]
+    },
+    sidebodyOffense: {
+        position: "sidebodyOffense" ,
+       techniques: [sidebody1_O, sidebody2_O, sidebody3_O]
+    },
+    sidebodyDefense: {
+        position: "sidebodyDefense" ,
+       techniques: [sidebody1_D, sidebody2_D, sidebody3_D]
+    },
+    northsouthOffense: {
+        position: "northsouthOffense" ,
+       techniques: [northsouth1_O, northsouth2_O, northsouth3_O]
+    },
+    northsouthDefense: {
+        position: "northsouthDefense" ,
+       techniques: [northsouth1_D, northsouth2_D, northsouth3_D]
+    },
+    kneeonbellyOffense: {
+        position: "kneeonbellyOffense" ,
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    kneeonbellyDefense: {
+        position:  "kneeonbellyDefense",
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    fullmountOffense: {
+        position: "fullmountOffense" ,
+       techniques: [fullmount1_O, fullmount2_O, fullmount3_O]
+    },
+    fullmountDefense: {
+        position: "fullmountDefense" ,
+       techniques: [fullmount1_D, fullmount2_D, fullmount3_D]
+    },
+    backcontrolOffense: {
+        position: "backcontrolOffense" ,
+       techniques: [backcontroll1_O, backcontroll2_O, backcontroll3_O]
+    },
+    backcontrolDefense: {
+        position:  "backcontrolDefense",
+       techniques: [backcontroll1_D, backcontroll2_D, backcontroll3_D]
+    },
+    takedownOffense: {
+        position: "takedownOffense" ,
+       techniques: [takedown1_O, takedown2_O, takedown3_O]
+    },
+    takedownDefense: {
+        position: "takedownDefense" ,
+       techniques: [takedown1_D, takedown2_D, takedown3_D]
+    },
+    turtleposition: {
+        position: "turtleposition" ,
+       techniques: [turtleposition1, turtleposition2, turtleposition3]
+    },
 })
 
 
 const brownbelt = new gameplan({
-    openguardOffense: [openguard1_O, openguard2_O, openguard3_O],
-    openguardDefense: [openguard1_D, openguard2_D, openguard3_D],
-    closeguardOffense: [closeguard1_O, closeguard2_O, closeguard3_O],
-    closeguardDefense: [closeguard1_D, closeguard2_D, closeguard3_D],
-    halfguardOffense: [halfguard1_O, halfguard2_O, halfguard3_O],
-    halfguardDeffense: [halfguard1_D, halfguard2_D, halfguard3_D],
-    sidebodyOffense: [sidebody1_O, sidebody2_O, sidebody3_O],
-    sidebodyDefense: [sidebody1_D, sidebody2_D, sidebody3_D],
-    northsouthOffense: [northsouth1_O, northsouth2_O, northsouth3_O],
-    northsouthDefense: [northsouth1_D, northsouth2_D, northsouth3_D],
-    kneeonbellyOffense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    kneeonbellyDefense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    fullmountOffense: [fullmount1_O, fullmount2_O, fullmount3_O],
-    fullmountDefense: [fullmount1_D, fullmount2_D, fullmount3_D],
-    backcontrolOffense: [backcontroll1_O, backcontroll2_O, backcontroll3_O],
-    backcontrolDefense: [backcontroll1_D, backcontroll2_D, backcontroll3_D],
-    takedownOffense: [takedown1_O, takedown2_O, takedown3_O],
-    takedownDefense: [takedown1_D, takedown2_D, takedown3_D],
-    turtleposition: [turtleposition1, turtleposition2, turtleposition3],
+    planname:"brown belt requirments",
+    targetbelt:"brown Belt",
+    openguardOffense: {
+        position: "openguardOffense"  ,
+       techniques: [openguard1_O, openguard2_O, openguard3_O]
+    },
+    openguardDefense: {
+        position: "closeguardOffense" ,
+       techniques: [openguard1_D, openguard2_D, openguard3_D]
+    },
+    closeguardOffense: {
+        position: "openguardDefense" ,
+       techniques: [closeguard1_O, closeguard2_O, closeguard3_O]
+    },
+    closeguardDefense: {
+        position:  "closeguardDefense",
+       techniques: [closeguard1_D, closeguard2_D, closeguard3_D]
+    },
+    halfguardOffense: {
+        position: "halfguardOffense" ,
+       techniques: [halfguard1_O, halfguard2_O, halfguard3_O]
+    },
+    halfguardDeffense: {
+        position: "halfguardDeffense" ,
+       techniques: [halfguard1_D, halfguard2_D, halfguard3_D]
+    },
+    sidebodyOffense: {
+        position: "sidebodyOffense" ,
+       techniques: [sidebody1_O, sidebody2_O, sidebody3_O]
+    },
+    sidebodyDefense: {
+        position: "sidebodyDefense" ,
+       techniques: [sidebody1_D, sidebody2_D, sidebody3_D]
+    },
+    northsouthOffense: {
+        position: "northsouthOffense" ,
+       techniques: [northsouth1_O, northsouth2_O, northsouth3_O]
+    },
+    northsouthDefense: {
+        position: "northsouthDefense" ,
+       techniques: [northsouth1_D, northsouth2_D, northsouth3_D]
+    },
+    kneeonbellyOffense: {
+        position: "kneeonbellyOffense" ,
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    kneeonbellyDefense: {
+        position:  "kneeonbellyDefense",
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    fullmountOffense: {
+        position: "fullmountOffense" ,
+       techniques: [fullmount1_O, fullmount2_O, fullmount3_O]
+    },
+    fullmountDefense: {
+        position: "fullmountDefense" ,
+       techniques: [fullmount1_D, fullmount2_D, fullmount3_D]
+    },
+    backcontrolOffense: {
+        position: "backcontrolOffense" ,
+       techniques: [backcontroll1_O, backcontroll2_O, backcontroll3_O]
+    },
+    backcontrolDefense: {
+        position:  "backcontrolDefense",
+       techniques: [backcontroll1_D, backcontroll2_D, backcontroll3_D]
+    },
+    takedownOffense: {
+        position: "takedownOffense" ,
+       techniques: [takedown1_O, takedown2_O, takedown3_O]
+    },
+    takedownDefense: {
+        position: "takedownDefense" ,
+       techniques: [takedown1_D, takedown2_D, takedown3_D]
+    },
+    turtleposition: {
+        position: "turtleposition" ,
+       techniques: [turtleposition1, turtleposition2, turtleposition3]
+    },
 })
 
 const blackbelt = new gameplan({
-    openguardOffense: [openguard1_O, openguard2_O, openguard3_O],
-    openguardDefense: [openguard1_D, openguard2_D, openguard3_D],
-    closeguardOffense: [closeguard1_O, closeguard2_O, closeguard3_O],
-    closeguardDefense: [closeguard1_D, closeguard2_D, closeguard3_D],
-    halfguardOffense: [halfguard1_O, halfguard2_O, halfguard3_O],
-    halfguardDeffense: [halfguard1_D, halfguard2_D, halfguard3_D],
-    sidebodyOffense: [sidebody1_O, sidebody2_O, sidebody3_O],
-    sidebodyDefense: [sidebody1_D, sidebody2_D, sidebody3_D],
-    northsouthOffense: [northsouth1_O, northsouth2_O, northsouth3_O],
-    northsouthDefense: [northsouth1_D, northsouth2_D, northsouth3_D],
-    kneeonbellyOffense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    kneeonbellyDefense: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O],
-    fullmountOffense: [fullmount1_O, fullmount2_O, fullmount3_O],
-    fullmountDefense: [fullmount1_D, fullmount2_D, fullmount3_D],
-    backcontrolOffense: [backcontroll1_O, backcontroll2_O, backcontroll3_O],
-    backcontrolDefense: [backcontroll1_D, backcontroll2_D, backcontroll3_D],
-    takedownOffense: [takedown1_O, takedown2_O, takedown3_O],
-    takedownDefense: [takedown1_D, takedown2_D, takedown3_D],
-    turtleposition: [turtleposition1, turtleposition2, turtleposition3],
+    planname:"black belt requirments",
+    targetbelt:"black Belt",
+    openguardOffense: {
+        position: "openguardOffense"  ,
+       techniques: [openguard1_O, openguard2_O, openguard3_O]
+    },
+    openguardDefense: {
+        position: "closeguardOffense" ,
+       techniques: [openguard1_D, openguard2_D, openguard3_D]
+    },
+    closeguardOffense: {
+        position: "openguardDefense" ,
+       techniques: [closeguard1_O, closeguard2_O, closeguard3_O]
+    },
+    closeguardDefense: {
+        position:  "closeguardDefense",
+       techniques: [closeguard1_D, closeguard2_D, closeguard3_D]
+    },
+    halfguardOffense: {
+        position: "halfguardOffense" ,
+       techniques: [halfguard1_O, halfguard2_O, halfguard3_O]
+    },
+    halfguardDeffense: {
+        position: "halfguardDeffense" ,
+       techniques: [halfguard1_D, halfguard2_D, halfguard3_D]
+    },
+    sidebodyOffense: {
+        position: "sidebodyOffense" ,
+       techniques: [sidebody1_O, sidebody2_O, sidebody3_O]
+    },
+    sidebodyDefense: {
+        position: "sidebodyDefense" ,
+       techniques: [sidebody1_D, sidebody2_D, sidebody3_D]
+    },
+    northsouthOffense: {
+        position: "northsouthOffense" ,
+       techniques: [northsouth1_O, northsouth2_O, northsouth3_O]
+    },
+    northsouthDefense: {
+        position: "northsouthDefense" ,
+       techniques: [northsouth1_D, northsouth2_D, northsouth3_D]
+    },
+    kneeonbellyOffense: {
+        position: "kneeonbellyOffense" ,
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    kneeonbellyDefense: {
+        position:  "kneeonbellyDefense",
+       techniques: [kneeonbelly1_O, kneeonbelly2_O, kneeonbelly3_O]
+    },
+    fullmountOffense: {
+        position: "fullmountOffense" ,
+       techniques: [fullmount1_O, fullmount2_O, fullmount3_O]
+    },
+    fullmountDefense: {
+        position: "fullmountDefense" ,
+       techniques: [fullmount1_D, fullmount2_D, fullmount3_D]
+    },
+    backcontrolOffense: {
+        position: "backcontrolOffense" ,
+       techniques: [backcontroll1_O, backcontroll2_O, backcontroll3_O]
+    },
+    backcontrolDefense: {
+        position:  "backcontrolDefense",
+       techniques: [backcontroll1_D, backcontroll2_D, backcontroll3_D]
+    },
+    takedownOffense: {
+        position: "takedownOffense" ,
+       techniques: [takedown1_O, takedown2_O, takedown3_O]
+    },
+    takedownDefense: {
+        position: "takedownDefense" ,
+       techniques: [takedown1_D, takedown2_D, takedown3_D]
+    },
+    turtleposition: {
+        position: "turtleposition" ,
+       techniques: [turtleposition1, turtleposition2, turtleposition3]
+    },
 })
 const gameplans = [bluebelt, purplebelt, brownbelt, blackbelt]
 

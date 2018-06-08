@@ -7,8 +7,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override')
 const bodyparser = require('body-parser')
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index')
+const usersRouter = require('./routes/users')
+const gameplanRouter = require('./routes/gameplan')
 
 
 
@@ -29,8 +30,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
-app.use('/', indexRouter);
-app.use('/user', usersRouter);
+app.use('/', indexRouter)
+app.use('/user', usersRouter)
+app.use('/user/:id/gameplans', gameplanRouter)
 
 //============================
 //Connect to data base
