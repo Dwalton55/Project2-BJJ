@@ -65,6 +65,7 @@ router.post('/', (req, res) => {
   })
 //edit
 router.get('/:techid/edit', (req, res) => {
+
     const techid = req.params.techid
     const gameplan = req.params.gameid
     const positionid =req.params.posid
@@ -72,7 +73,7 @@ router.get('/:techid/edit', (req, res) => {
       .findById(req.params.id)
       .then((technique) => {
         res.render('user/gameplan/techniques/techniqueEdit', { 
-            
+            techid,
             technique,
             gameplan,
             positionid,
@@ -97,7 +98,7 @@ router.put('/:techid', (req, res) => {
         return user.save()
 
     })
-    res.redirect(`/user/${req.params.id}/`)
+    res.redirect(`/user/${user._id}/gameplans/${gameplan}/${positionid}/${techid}`)
   })
   
 //delete

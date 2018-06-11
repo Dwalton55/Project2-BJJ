@@ -1,13 +1,13 @@
 <h1>edit technique</h1>
 
-<form action="/user/{{userID}}/gameplans/{{gameplan}}/{{positionid}}" method="POST">
+<form action="/user/{{technique._id}}/gameplans/{{gameplan}}/{{positionid}}/{{techid}}?_method=PUT" method="POST">
   <div>
     <label for="Name">technique</label>
-    <input type="text" name="Name" placeholder="technique name" />
+    <input type="text" name="Name" value="{{Name}}" />
   </div>
   <div>
     <label for="Description">Submitted By</label>
-    <input type="text" name="Description" placeholder="details" />
+    <input type="text" name="Description" value="{{Description}}" />
   </div>
   
   <button type="submit">Save Comment</button>
