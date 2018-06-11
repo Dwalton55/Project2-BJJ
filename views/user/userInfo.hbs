@@ -2,10 +2,13 @@
 <h3>School: {{indivUser.school}}</h3>
 <p>Coach: {{indivUser.coach}}</p>
 <p>Current Belt: {{indivUser.currentBelt.color}}</p>
+<p><a href="/user/{{indivUser._id}}/gameplans/">Gameplans</a></p>
 <p>Target Belt: {{indivUser.targetBelt.color}}</p>
 <p>Tournaments: {{indivUser.Tournaments}}</p>
 <p>Past Belts: {{indivUser.pastbelts}}</p>
 
+<button><a href="/user/{{indivUser._id}}/edit">Edit</a></button>
+<button><a href="/user">back</a></button>
 <form action="/user/{{indivUser._id}}?_method=DELETE" method="POST">
   <button type="submit">Delete {{indivUser.name}}</button>
 </form>

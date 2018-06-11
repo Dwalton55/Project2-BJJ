@@ -4,9 +4,11 @@
   {{#each gameplans}}
   <li>
     {{!-- <a href="/user/{{_id}}"> --}}
-      <p>{{planname}} - {{targetbelt}}</p>
+      <p><a href="/user/{{../userGP._id}}/gameplans/{{_id}}">{{planname}}</a> - {{targetbelt}}</p>
      
     {{!-- </a> --}}
   </li>
   {{/each}}
 </ul>
+
+<button><a href="/user/{{userGP._id}}/"> back</a></button>

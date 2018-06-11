@@ -11,6 +11,7 @@ router.get('/', (req, res, next) => {
       .then((userGP) => {
         const gameplans = userGP.gamePlans
         res.render('user/gameplan/gameplanIndex', {
+          userGP,
           gameplans
         })
       })
@@ -55,6 +56,7 @@ router.get('/:gameid', (req, res) => {
         console.log(userGP.gamePlans)
       const gameplans = userGP.gamePlans.id(gameplan)
       res.render('user/gameplan/gameplanShow', {
+        userGP,
         userid,
         gameplans,
 
@@ -62,4 +64,7 @@ router.get('/:gameid', (req, res) => {
     })
   })
 
+  //edit
+  //update
+  //delete
 module.exports = router
