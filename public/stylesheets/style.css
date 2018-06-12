@@ -79,3 +79,15 @@ button {
 li{
 list-style: none;
 }
+#techniqueIndex{
+  display: flex
+}
+.border1{
+  align-self: auto;
+  font-size: 1.4em;
+  border: solid red;
+  margin: 10px 0 10px 0 ;
+}
+#techbutton{
+  margin-left: 250px
+}

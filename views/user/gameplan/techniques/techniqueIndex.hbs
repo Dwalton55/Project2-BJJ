@@ -1,16 +1,19 @@
 <div class="background">
-<h1>ROUTE IS RIGHT</h1>
-{{gameplans.position}}
+<h1>{{gameplans.position}}</h1>
+<div id="techniqueIndex">
+
 <ul>
 {{#each gameplans.techniques}}
-<li>{{Name}}</li>
-<li>{{Description}}</li>
-
+<div class="border1">
+    <li>{{Name}}</li>
+    <li>{{Description}}</li>
+</div>
 <button><a href="{{../gameplans.position}}/{{_id}}/edit">Edit</a></button>
 {{/each}}
 </ul>
 {{positionid._id}}
-<button><a href="{{gameplans.position}}/new/">add technique</a></button>
+<button id="techbutton"><a href="{{gameplans.position}}/new/">add technique</a></button>
 
+</div>
 
 </div>
