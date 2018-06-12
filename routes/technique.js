@@ -98,7 +98,7 @@ router.put('/:techid', (req, res) => {
         return user.save()
 
     })
-    res.redirect(`/user/${user._id}/gameplans/${gameplan}/${positionid}/${techid}`)
+    res.redirect(`/user/${User._id}/gameplans/${gameplan}/${positionid}`)
   })
   
 //delete
