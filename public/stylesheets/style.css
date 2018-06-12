@@ -1,8 +1,43 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black,
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(255, 0, 0);
+  text-decoration: none;
 }
+
+/* ------------------------------------------------------------------------------------  */
+/*                                       USER INDEX                                      */
+/* ------------------------------------------------------------------------------------- */
+.background {
+
+  height: 100vh;
+  width: 100vh;
+  color: red;
+  text-decoration: none;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  background-image: url('../images/whitelogo.png');
+  background-repeat: no-repeat;
+  
+  
+}
+.background a{
+
+  color: yellow;
+  text-decoration: none;
+}
+
+.background a:hover {
+  color: red;
+  text-shadow: 5px;
+  font-size: 35px;
+}
+
+/* ------------------------------------------------------------------------------------  */
+/*                                  USER INDEX  END                                      */
+/* ------------------------------------------------------------------------------------- */

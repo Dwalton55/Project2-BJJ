@@ -1,16 +1,20 @@
-<h1>All Users</h1>
+<div class="wrapper1">
+<div class="background">
+  <h1>All Users</h1>
 
-<ul>
-  {{#each listofUsers}}
-  <li>
-    <a href="/user/{{_id}}">
-      <p>{{name}} - {{school}}</p>
-      <p>Coach:{{coach}}</p>
-    </a>
-  </li>
-  {{/each}}
-</ul>
+  <ul>
+    {{#each listofUsers}}
+    <li>
+      <a href="/user/{{_id}}">
+        <p>{{name}} - {{school}}</p>
+        <p>Coach:{{coach}}</p>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
 
-<button>
-  <a href="/user/new">  New user</a>
+  <button>
+    <a href="/user/new"> New user</a>
   </button>
+</div>
+</div>
