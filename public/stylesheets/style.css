@@ -8,6 +8,10 @@ a {
   color: rgb(255, 0, 0);
   text-decoration: none;
 }
+a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 
 /* ------------------------------------------------------------------------------------  */
 /*                                       USER INDEX                                      */
@@ -34,9 +38,10 @@ padding: 0px;
 }
 
 .background a:hover {
-  color: red;
+  color: rgb(255, 255, 255);
   text-shadow: 5px;
-  font-size: 35px;
+  text-emphasis: 1em;
+ 
 }
 
 /* ------------------------------------------------------------------------------------  */
@@ -47,16 +52,30 @@ padding: 0px;
   display: grid;
   grid-template-columns: repeat(4 1fr)
 }
-
-.col1{
-  grid-column: 1
+#parent{
+  justify-content: space-between;
+  
+  display: flex;
 }
-.col2{
-  grid-column: 2
+#column1{
+  align-self: auto;
+  
 }
-.col3{
-  grid-column: 3
+#column2{
+  align-self: auto;
+  
 }
-.colly4{
-  grid-column: 4
+#column3{
+  align-self: auto;
+  
+}
+#column4{
+  align-self: auto;
+  
+}
+button {
+  background-color: gray;
+}
+li{
+list-style: none;
 }

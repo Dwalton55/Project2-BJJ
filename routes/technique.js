@@ -101,8 +101,6 @@ router.put('/:techid', (req, res) => {
     }).then(user => {
       res.redirect(`/user/${user._id}/gameplans/${gameid}/${positionid}`)
     })
-
-  
 })
 
 //delete

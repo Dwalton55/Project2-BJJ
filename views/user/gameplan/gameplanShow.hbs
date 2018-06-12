@@ -3,46 +3,52 @@
 <h1> {{gameplans.planname}}</h1>
 <h2>{{gameplans.targetbelt}}</h2>
 
+<div id="parent">
+
+    
+<div id="column1">
+    
 <ul>
     <li> position: <a href="{{gameplans._id}}/{{gameplans.openguardOffense.position}}">{{gameplans.openguardOffense.position}}</a> </li>
-    <br>
+    
     {{#each gameplans.openguardOffense.techniques}}
     <li>name:{{Name}}</li>
-    <br>
+    
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
 
 <ul>
     <li> position:  <a href="{{gameplans._id}}/{{gameplans.openguardDefense.position}}">{{gameplans.openguardDefense.position}}</a> </li>
-    <br>
+    
     {{#each gameplans.openguardDefense.techniques}}
     <li>name:{{Name}}</li>
-    <br>
+    
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
 
 <ul>
      <li> position: <a href="{{gameplans._id}}/{{gameplans.closeguardOffense.position}}">{{gameplans.closeguardOffense.position}}</a> </li>
-    <br>
+    
     {{#each gameplans.closeguardOffense.techniques}}
     <li>name:{{Name}}</li>
-    <br>
+    
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
 
 <ul>
     <li> position:  <a href="{{gameplans._id}}/{{gameplans.closeguardDefense.position}}">{{gameplans.closeguardDefense.position}}</a> </li>
-    <br>
+    
     {{#each gameplans.closeguardDefense.techniques}}
     <li>name:{{Name}}</li>
-    <br>
+    
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
-
+</div>
+<div id="column2"> 
 <ul>
     <li> position:  <a href="{{gameplans._id}}/{{gameplans.halfguardOffense.position}}">{{gameplans.halfguardOffense.position}}</a></li>
     {{#each gameplans.halfguardOffense.techniques}}
@@ -82,7 +88,8 @@
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
-
+</div>
+<div id="column3">    
 <ul>
     <li> position: <a href="{{gameplans._id}}/{{gameplans.northsouthDefense.position}}">{{gameplans.northsouthDefense.position}}</a></li>
     {{#each gameplans.northsouthDefense.techniques}}
@@ -123,7 +130,9 @@
     <li>Des:{{Description}}</li>
     {{/each}}
 </ul>
+</div>
 
+<div id="column4">
 <ul>
     <li> position: <a href="{{gameplans._id}}/{{gameplans.backcontrolOffense.position}}">{{gameplans.backcontrolOffense.position}}</a></li>
     {{#each gameplans.backcontrolOffense.techniques}}
@@ -170,4 +179,7 @@
 
 <button><a href="/user/{{userGP._id}}/gameplans"> back</a></button>
 
+
+</div>
+</div>
 </div>
