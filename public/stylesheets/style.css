@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black,
 }
@@ -14,9 +14,9 @@ a {
 /* ------------------------------------------------------------------------------------- */
 
 .background {
-
-  height: 100vh;
-  width: 100vh;
+padding: 0px;
+  height: 100%;
+  width: 100%;
   color: red;
   text-decoration: none;
   padding: 50px;
@@ -42,3 +42,21 @@ a {
 /* ------------------------------------------------------------------------------------  */
 /*                                  USER INDEX  END                                      */
 /* ------------------------------------------------------------------------------------- */
+
+.gameplan{
+  display: grid;
+  grid-template-columns: repeat(4 1fr)
+}
+
+.col1{
+  grid-column: 1
+}
+.col2{
+  grid-column: 2
+}
+.col3{
+  grid-column: 3
+}
+.colly4{
+  grid-column: 4
+}
